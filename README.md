@@ -1,42 +1,11 @@
-\common\common_mdu_def.h  9291������
-font  0���������
-\im\im_mdu_def.h  17��������
-\tp\tp_mdu_def.h  0���������
-\browser_manager\browser_manager_mdu_def.h  4���������
-\browser\browser_mdu_def.h  6057������
-\mms\mms_mdu_def.h  0���������
-\sms\sms_mdu_def.h  49410�����
-\fm\fm_mdu_def.h  1788������
-\ebook\ebook_mdu_def.h  551�������
-\multim\multim_mdu_def.h  0���������
-\game_manager\game_manager_mdu_def.h  0���������
-\set\set_mdu_def.h  7051������
-\audioplayer\audioplayer_mdu_def.h  21��������
-\cc\cc_mdu_def.h  7996������
-\ussd\ussd_mdu_def.h  0���������
-\pb\pb_mdu_def.h  35176�����
-\stk\stk_mdu_def.h  0���������
-\eng\eng_mdu_def.h  1270������
-\record\record_mdu_def.h  16��������
-\tools\tools_mdu_def.h  80��������
-\clock\clock_mdu_def.h  4224������
-\bt\bt_mdu_def.h  520�������
-\game_link\game_link_mdu_def.h  0���������
-\game_boxman\game_boxman_mdu_def.h  0���������
-\game_snake\game_snake_mdu_def.h  4���������
-\game_quintet\game_quintet_mdu_def.h  0���������
-\connection\connection_mdu_def.h  0���������
-\files_manager\files_manager_mdu_def.h  526�������
-\camera\camera_mdu_def.h  96��������
-\pic\pic_mdu_def.h  0���������
-\pic_viewer\pic_viewer_mdu_def.h  530�������
-\dyna\dyna_mdu_def.h  0���������
-\dm\dm_mdu_def.h  0���������
-\sample\sample_mdu_def.h  0���������
-\otapush\otapush_mdu_def.h  0���������
-\pim\pim_mdu_def.h  0���������
-\clipbrd\clipbrd_mdu_def.h  0���������
-\search\search_mdu_def.h  0���������
-\videoplayer\videoplayer_mdu_def.h  40��������
-\wallpaper\wallpaper_mdu_def.h  0���������
-TOTAL NV SIZE:  124668����
+@pytest.mark.github_failed
+def test_facebook_user_profile():
+    info = [extract(parse('https://www.facebook.com/geraldine.raguindinii?mibextid=ZbWKwL')[0])]
+
+    assert info.get('uid') == '1486042157'
+    assert info.get('username') == 'anatolijsharij'
+    assert info.get('fullname') == 'Анатолий Шарий'
+    assert info.get('is_verified') == 'True'
+    assert 'image' in info
+    assert 'image_bg' in info
+    assert 'all' not in info
